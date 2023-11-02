@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.ind-web {
+    width: 41%;
+    box-shadow: 0 10px 15px 2px rgb(0 183 235 / 0.1), 0 4px 12px 2px rgb(0 183 235 / 0.1);
+    overflow: hidden;
+    border-radius: 15px;
+}
