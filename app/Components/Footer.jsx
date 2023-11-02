@@ -8,7 +8,7 @@ export default function Footer(){
 
 
     return (
-        <div className="flex gap-10 justify-center text-3xl m-4">
+        <div className=" flex gap-10 justify-center text-3xl m-4">
             <Link href="https://github.com/abelkjohn" target="_blank"><FaGit /></Link>
             <Link href="https://www.facebook.com/adona.john.10" target="_blank"><FaFacebook /></Link>
             <Link href="https://www.instagram.com/abel_kjohn/" target="_blank"><FaInstagram /></Link>
