@@ -1,5 +1,5 @@
 import React from "react";
-import Me from '../images/ME.jpg'
+import Me from '../images/Me.jpg'
 
 export default function About(){
     return <div className="flex flex-col md:flex-row mx-3 gap-4 md:m-32 text-center md:text-left">
