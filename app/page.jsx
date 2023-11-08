@@ -5,7 +5,7 @@ import WebLinks from "./Components/Websites"
 import About from "./Components/About"
 
 export default function Home() {
-  return <div className="mt-28">
+  return <div className="overflow-clip">
     <Header />
     <About />
     <WebLinks />
