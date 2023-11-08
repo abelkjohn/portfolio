@@ -4,11 +4,13 @@ import Footer from "./Components/Footer"
 import WebLinks from "./Components/Websites"
 import About from "./Components/About"
 import Skills from "./Components/Skills"
+import Hi from "./Components/Hi"
 
 export default function Home() {
   return <div className="overflow-clip">
     <Header />
     <About />
+    <Hi />
     <Skills />
     <WebLinks />
     <Footer />

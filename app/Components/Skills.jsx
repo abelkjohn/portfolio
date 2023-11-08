@@ -6,6 +6,7 @@ export default function Skills(){
             <div className="pt-4 md:w-1/3 lg:w-1/3">
                 <h1  className="text-lg text-center md:text-left lg:text-left">Get to know me:</h1>
                 <div className="p-2 pt-1 mx-3 mb-5 text-center md:text-left lg:text-left">My background is in Business Administration and Marketing/Sales . I&apos;am currently working on a bachelors degree in Business Administration from Amity University Online. When I&apos;m not coding, I play the guitar or explore.
+                <div className="p-2 bg-cyan-200 w-fit rounded-lg mt-4 mx-auto md:ml-0 lg:ml-0 ">My Resume</div>
             </div>
             </div>
             <div className="flex flex-col justify-start w-96 my-4 ">
@@ -30,7 +31,6 @@ export default function Skills(){
                 <div className="skill-button">Active Listening</div>
                 <div className="skill-button">Building Consensus</div>
                 <div className="skill-button">Conflict Resolution</div>
-
             </div>       
         </div>
         </div>
