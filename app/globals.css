@@ -34,10 +34,32 @@ html, body {
 
 }
 
-.custom-width {
-    width: 28em;
-}
+
 
 .custom-right {
-    right: 47em;
+    right: 50%;
+}
+
+
+@media (min-width: 600px) {
+    .custom-width {
+    width: 28em;
+    }
+
+    .custom-me-img {
+        width: 15em;
+    }
+}
+
+@media (max-width: 600px){
+
+    .custom-me-img{
+        width: 10em;
+        right: 55%;
+        top: 6em;
+    }
+
+    .custom-width {
+        width: 20em;
+    }
 }
