@@ -14,7 +14,7 @@ import movie from '../images/movies-list.jpeg'
 export default function WebLinks(){
     return (
         <div id="websites" className="flex flex-col items-center ">
-            <h1 className="text-3xl mt-32">Websites</h1>
+            <h1 className="text-3xl mt-28 md:mt-32 lg:32">Websites</h1>
             <div  className="flex flex-wrap gap-6 my-8 mx-auto w-11/12 justify-center ">
             <Link className="ind-web" href='https://teal-shortbread-702f8c.netlify.app/' target="_blank"><img src={nilambur.src} /></Link>
             <Link className="ind-web" href='https://6543d93bd052e22381dc3020--vermillion-kitten-ebe710.netlify.app/'target='_blank'><img src={burger.src} /></Link>
