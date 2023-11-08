@@ -49,17 +49,26 @@ html, body {
     .custom-me-img {
         width: 15em;
     }
+
+    .custom-hi {
+        padding-right: 6.5em; 
+    }
+
+    .custom-name {
+        padding-right: 4em; 
+    
+    }
 }
 
 @media (max-width: 600px){
 
     .custom-me-img{
-        width: 10em;
-        right: 55%;
-        top: 6em;
+        width: 9em;
+        right: 53%;
+        top: 7em;
     }
 
     .custom-width {
-        width: 20em;
+        width: 21em;
     }
 }
