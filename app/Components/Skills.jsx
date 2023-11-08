@@ -5,7 +5,7 @@ export default function Skills(){
         <div className="flex w-11/12 justify-end mx-auto gap-6">
             <div className="w-1/3">
                 <h1>Get to know me:</h1>
-                <div>My background is in Business Administration and Marketing/Sales . I am currently working on a bachelors degree in Business Administration from Amity University Online. When I'm not coding, I play the guitar or explore.
+                <div>My background is in Business Administration and Marketing/Sales . I&apos;am currently working on a bachelors degree in Business Administration from Amity University Online. When I&apos;m not coding, I play the guitar or explore.
             </div>
             </div>
             <div className="flex flex-col justify-start w-96 my-4 ">
