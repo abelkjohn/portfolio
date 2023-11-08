@@ -19,6 +19,7 @@ export default function Skills(){
                 <div className="skill-button">firebase</div>
                 <div className="skill-button">Node.js</div>
                 <div className="skill-button">TailwindCss</div>
+                <div className="skill-button">Responsive Design</div>     
                 <div className="skill-button">Git</div>     
             </div>       
         </div>
