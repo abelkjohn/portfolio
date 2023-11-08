@@ -4,8 +4,8 @@ export default function Skills(){
     return (
         <div className="flex w-11/12 justify-end mx-auto gap-6 flex-wrap lg:flex-nowrap">
             <div className="pt-4 md:w-1/3 lg:w-1/3">
-                <h1>Get to know me:</h1>
-                <div className="p-2 pt-1">My background is in Business Administration and Marketing/Sales . I&apos;am currently working on a bachelors degree in Business Administration from Amity University Online. When I&apos;m not coding, I play the guitar or explore.
+                <h1  className="text-lg text-center md:text-left lg:text-left">Get to know me:</h1>
+                <div className="p-2 pt-1 mx-3 mb-5 text-center md:text-left lg:text-left">My background is in Business Administration and Marketing/Sales . I&apos;am currently working on a bachelors degree in Business Administration from Amity University Online. When I&apos;m not coding, I play the guitar or explore.
             </div>
             </div>
             <div className="flex flex-col justify-start w-96 my-4 ">
