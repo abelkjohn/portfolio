@@ -71,4 +71,13 @@ html, body {
     .custom-width {
         width: 21em;
     }
+
+    .custom-hi {
+        padding-right: 4.3em; 
+    }
+
+    .custom-name {
+        padding-right: 1.8em; 
+    
+    }
 }
