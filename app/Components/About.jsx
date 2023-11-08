@@ -4,7 +4,7 @@ import Me from '../images/Me.jpg'
 export default function About(){
     return (
         <div id="about" className="border-2 border-white">
-            <div  className="flex flex-col lg:flex-row mx-3 gap-4 mt-44 lg:m-32 lg:mt-44 border-2 border-white text-center lg:text-left">
+            <div  className="flex flex-col lg:flex-row mx-3 gap-4 mt-32 lg:m-32 lg:mt-44 border-2 border-white text-center lg:text-left">
                 <img className="rounded-full h-min w-80 mx-auto" src={Me.src} />
                 <div className="flex flex-col justify-center">
                     <h1 className="text-lg">About Abel K John</h1>
