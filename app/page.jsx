@@ -8,10 +8,11 @@ import Hi from "./Components/Hi"
 
 export default function Home() {
   return <div className="overflow-clip">
-    <Header />
+    <Header /> 
     <Hi />
     <Skills />
     <WebLinks />
-    <Footer />
+    <Footer /> 
     </div>
 }
+

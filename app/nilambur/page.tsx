@@ -4,6 +4,7 @@ import Header from "../Components/Header";
 import nilambur from '../images/Nilambur.jpeg'
 
 export default function Nilambur(){
+
     return (
         <div>
             <Header />
