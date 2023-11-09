@@ -9,7 +9,6 @@ import Hi from "./Components/Hi"
 export default function Home() {
   return <div className="overflow-clip">
     <Header />
-    <About />
     <Hi />
     <Skills />
     <WebLinks />
