@@ -1,7 +1,7 @@
 
 import React from "react";
 import { useParams } from 'next/navigation'
-import Header from '../../Components/Header'
+import Header from '../Components/Header'
 import Link from "next/link"
 
 const getProjectById = async (id) => {

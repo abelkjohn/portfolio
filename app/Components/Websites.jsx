@@ -1,14 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import nilambur from '../images/Nilambur.jpeg'
-import burger from '../images/Burger.jpeg'
-import chats from '../images/Chats.jpeg'
-import funding from '../images/Funding.jpeg'
-import pass from '../images/GenPass.jpeg'
-import gtd from '../images/GTD.jpeg'
-import converter from '../images/Converter.jpeg'
-import scoreboard from '../images/Scoreboard.jpeg'
-import movie from '../images/movies-list.jpeg'
 
 const getProjects = async() => {
     try {
@@ -34,7 +25,7 @@ export default async function WebLinks(){
             <h1 className="text-3xl mt-28 md:mt-32 lg:32">My Projects</h1>
             <div  className="flex flex-wrap gap-6 my-8 mx-auto w-11/12 justify-center ">
             {projects.map(i => {
-                const link = `/websites/${i._id}`
+                const link = `/${i._id}`
                  return <Link key={i._id} className="ind-web" href={link}><img src={i.image} /></Link>
             })}
 
