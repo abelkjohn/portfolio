@@ -40,6 +40,9 @@ html, body {
     right: 50%;
 }
 
+.custom-webpage-ind-img {
+    width: 90%;
+}
 
 @media (min-width: 600px) {
     .custom-width {
