@@ -1,5 +1,10 @@
 import React from "react";
+import Header from '../Components/Header'
 
 export default function Website(){
-    return <h1>hello</h1>
+    return (
+        <div>
+            <Header />
+        </div>
+    )
 }
