@@ -10,24 +10,50 @@ import converter from '../images/Converter.jpeg'
 import scoreboard from '../images/Scoreboard.jpeg'
 import movie from '../images/movies-list.jpeg'
 
+const getProjects = async() => {
+    try {
+        const res =  await fetch("http://localhost:3000/api/projects", {
+            cache: "no-store"
+        })
 
-export default function WebLinks(){
+        if (!res.ok) {
+            throw new Error("Failed to fetch Projects")
+        }
+        
+        return res.json()
+    } catch (error) {
+        console.log("Error loading Projects")
+    }
+}
+
+export default async function WebLinks(){
+    
+    const { projects } = await getProjects()
     return (
         <div id="websites" className="flex flex-col items-center ">
             <h1 className="text-3xl mt-28 md:mt-32 lg:32">My Projects</h1>
             <div  className="flex flex-wrap gap-6 my-8 mx-auto w-11/12 justify-center ">
-            <Link className="ind-web" href='/nilambur'><img src={nilambur.src} /></Link>
-            <Link className="ind-web" href='https://6543d93bd052e22381dc3020--vermillion-kitten-ebe710.netlify.app/'target='_blank'><img src={burger.src} /></Link>
-            <Link className="ind-web" href='https://6543dafbe0e90d1e3276f639--dainty-pika-ccf3b3.netlify.app/' target="_blank"><img src={pass.src} /></Link>
-            <Link className="ind-web" href='https://6543dc07c8cb3a2b2ad7b5a0--dreamy-licorice-4a4e96.netlify.app/' target="_blank"><img src={scoreboard.src} /></Link>
-            <Link className="ind-web bg-gray-100" href='https://6543dfdb8452f2347c61cbcb--deluxe-cranachan-f3c317.netlify.app/' target="_blank"><img src={converter.src} /></Link>
-            <Link className="ind-web" href='https://timely-lollipop-fb855f.netlify.app/' target="_blank"><img src={chats.src} /></Link>
-            <Link className="ind-web" href='https://movies-list-ivory.vercel.app/' target="_blank"><img src={movie.src} /></Link>
-            <Link className="ind-web" href='https://dainty-blini-640110.netlify.app/login' target="_blank"><img src={funding.src} /></Link>
-            <Link className="ind-web" href='https://gtdlast-git-master-abelkjohns-projects.vercel.app' target="_blank"><img src={gtd.src} /></Link>
+            {projects.map(i => {
+                const link = `/${i._id}`
+                 return <Link key={i._id} className="ind-web" href={link}><img src={i.image} /></Link>
+            })}
+
             </div>
         </div>
     )
 }
 
 // import nilambur from '../images/Nilambur.jpeg'
+
+
+
+// <Link className="ind-web" href='/nilambur'><img src={nilambur.src} /></Link>
+// <Link className="ind-web" href='/menu' target='_blank'><img src={burger.src} /></Link>
+// <Link className="ind-web" href='https://6543dafbe0e90d1e3276f639--dainty-pika-ccf3b3.netlify.app/' target="_blank"><img src={pass.src} /></Link>
+// <Link className="ind-web" href='https://6543dc07c8cb3a2b2ad7b5a0--dreamy-licorice-4a4e96.netlify.app/' target="_blank"><img src={scoreboard.src} /></Link>
+// <Link className="ind-web bg-gray-100" href='https://6543dfdb8452f2347c61cbcb--deluxe-cranachan-f3c317.netlify.app/' target="_blank"><img src={converter.src} /></Link>
+// <Link className="ind-web" href='https://timely-lollipop-fb855f.netlify.app/' target="_blank"><img src={chats.src} /></Link>
+// <Link className="ind-web" href='https://movies-list-ivory.vercel.app/' target="_blank"><img src={movie.src} /></Link>
+// <Link className="ind-web" href='https://dainty-blini-640110.netlify.app/login' target="_blank"><img src={funding.src} /></Link>
+// <Link className="ind-web" href='https://gtdlast-git-master-abelkjohns-projects.vercel.app' target="_blank"><img src={gtd.src} /></Link>
+
