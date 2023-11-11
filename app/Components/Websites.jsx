@@ -1,6 +1,8 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+
 
 const getProjects = async () => {
     try {
@@ -22,17 +24,22 @@ const getProjects = async () => {
 export default async function WebLinks(){
     
     const {projects} = await getProjects()
+    
     return (
         <div id="websites" className="flex flex-col items-center ">
             <h1 className="text-3xl mt-28 md:mt-32 lg:32">My Projects</h1>
             <div  className="flex flex-wrap gap-6 my-8 mx-auto w-11/12 justify-center ">
-                {JSON.stringify(projects)}
+                {projects.map(i => {
+                    console.log(i.image)
+                    const src = i.image
+                    return <Link href={`websites/${i._id}`} key={i._id} ><img src={src}></img></Link>})
+                    }
             </div>
         </div>
     )
 }
 
-// import nilambur from '../images/Nilambur.jpeg'
+// 
 
 
 

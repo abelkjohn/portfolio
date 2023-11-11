@@ -6,7 +6,7 @@ import Link from "next/link"
 
 const getProjectById = async (id) => {
     try {
-        const res =  await fetch(`http://localhost:3000/api/projects/${id}`, {
+        const res =  await fetch(`https://portfolio-delta-dun-62.vercel.app/api/projects/${id}`, {
             cache: "no-store"
         })
 
