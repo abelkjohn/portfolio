@@ -1,8 +1,7 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-
+import movies from '../images/Something.jpeg'
 
 const getProjects = async () => {
     try {
@@ -27,10 +26,9 @@ export default async function WebLinks(){
     
     return (
         <div id="websites" className="flex flex-col items-center ">
-            <h1 className="text-3xl mt-28 md:mt-32 lg:32">My Projects</h1>
+            <h1 className="text-3xl mt-28 md:mt-32 lg:32">{movies.src}</h1>
             <div  className="flex flex-wrap gap-6 my-8 mx-auto w-11/12 justify-center ">
                 {projects.map(i => {
-                    console.log(i.image)
                     const src = i.image
                     return <Link href={`websites/${i._id}`} key={i._id} ><img src={src}></img></Link>})
                     }
