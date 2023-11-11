@@ -21,22 +21,15 @@ const getProjects = async () => {
 
 export default async function WebLinks(){
     
-    try {
-        const { projects } = await getProjects();
-        // Do something with projects
-        console.log("poda")
-        return (
-            <div id="websites" className="flex flex-col items-center ">
-                <h1 className="text-3xl mt-28 md:mt-32 lg:32">My Projects</h1>
-                <div  className="flex flex-wrap gap-6 my-8 mx-auto w-11/12 justify-center ">
-                    {JSON.stringify(projects)}
-                </div>
+    const {projects} = await getProjects()
+    return (
+        <div id="websites" className="flex flex-col items-center ">
+            <h1 className="text-3xl mt-28 md:mt-32 lg:32">My Projects</h1>
+            <div  className="flex flex-wrap gap-6 my-8 mx-auto w-11/12 justify-center ">
+                {JSON.stringify(projects)}
             </div>
-        )
-      } catch (error) {
-        // Handle errors here
-        console.error('Error:', error);
-      }
+        </div>
+    )
 }
 
 // import nilambur from '../images/Nilambur.jpeg'
