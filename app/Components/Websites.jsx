@@ -2,9 +2,9 @@
 import React from "react";
 import Link from "next/link";
 
-const getProjects = async() => {
+const getProjects = async () => {
     try {
-        const res =  await fetch("http://localhost:3000/api/projects", {
+        const res =  await fetch(`http://localhost:3000/api/projects`, {
             cache: "no-store"
         })
 
@@ -18,19 +18,15 @@ const getProjects = async() => {
     }
 }
 
+
 export default async function WebLinks(){
     
-    const projects = await getProjects()
-    console.log(projects.projects)
+    const {projects} = await getProjects()
     return (
         <div id="websites" className="flex flex-col items-center ">
             <h1 className="text-3xl mt-28 md:mt-32 lg:32">My Projects</h1>
             <div  className="flex flex-wrap gap-6 my-8 mx-auto w-11/12 justify-center ">
-            {projects.projects ? projects.projects.map(i => {
-                const link = `/websites/${i._id}`
-                 return <Link key={i._id} className="ind-web" href={link}><img src={i.image} /></Link>
-            }) : null}
-
+                {JSON.stringify(projects)}
             </div>
         </div>
     )
