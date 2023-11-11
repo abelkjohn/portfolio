@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const getProjects = async () => {
     try {
-        const res =  await fetch(`./api/projects`, {
+        const res =  await fetch(`https://portfolio-delta-dun-62.vercel.app/api/projects`, {
             cache: "no-store"
         })
 
