@@ -24,6 +24,7 @@ export default async function WebLinks(){
     try {
         const { projects } = await getProjects();
         // Do something with projects
+        console.log("poda")
         return (
             <div id="websites" className="flex flex-col items-center ">
                 <h1 className="text-3xl mt-28 md:mt-32 lg:32">My Projects</h1>
