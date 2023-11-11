@@ -21,15 +21,21 @@ const getProjects = async () => {
 
 export default async function WebLinks(){
     
-    const {projects} = await getProjects()
-    return (
-        <div id="websites" className="flex flex-col items-center ">
-            <h1 className="text-3xl mt-28 md:mt-32 lg:32">My Projects</h1>
-            <div  className="flex flex-wrap gap-6 my-8 mx-auto w-11/12 justify-center ">
-                {JSON.stringify(projects)}
+    try {
+        const { projects } = await getProjects();
+        // Do something with projects
+        return (
+            <div id="websites" className="flex flex-col items-center ">
+                <h1 className="text-3xl mt-28 md:mt-32 lg:32">My Projects</h1>
+                <div  className="flex flex-wrap gap-6 my-8 mx-auto w-11/12 justify-center ">
+                    {JSON.stringify(projects)}
+                </div>
             </div>
-        </div>
-    )
+        )
+      } catch (error) {
+        // Handle errors here
+        console.error('Error:', error);
+      }
 }
 
 // import nilambur from '../images/Nilambur.jpeg'
