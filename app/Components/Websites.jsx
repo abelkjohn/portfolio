@@ -27,8 +27,7 @@ export default async function WebLinks(){
             <h1 className="text-3xl mt-28 md:mt-32 lg:32">My Projects</h1>
             <div  className="flex flex-wrap gap-6 my-8 mx-auto w-11/12 justify-center ">
                 {projects.map(i => {
-                    const src = i.image
-                    return <Link href={`websites/${i._id}`} key={i._id} ><img src={src}></img></Link>})
+                    return <Link href={`websites/${i._id}`} key={i._id} className="w-96"><img src={i.image} className="rounded-lg shadow-xl shadow-indigo-200"></img></Link>})
                     }
             </div>
         </div>

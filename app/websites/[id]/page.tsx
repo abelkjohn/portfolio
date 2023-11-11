@@ -25,6 +25,10 @@ export default async function Website({params}){
     const {topic} = await getProjectById(id)
     const { title, description, liveUrl, gitUrl, image, skills} = topic
     
+    function convert(){
+        return <div dangerouslySetInnerHTML={{ __html: description }} />
+    }
+
     return (
         <div>
             <Header />
@@ -38,7 +42,7 @@ export default async function Website({params}){
                 <div className="flex gap-2 flex-wrap">
                     {skills.map(i => <p key={i} className="px-4 py-2 text-center border-none bg-indigo-500 shadow-xl shadow-indigo-700/50 rounded-sm text-slate-100">{i}</p>)}
                 </div>
-                <p className="mt-5">{description}</p>
+                <div id='poda' className="mt-5">{convert()}</div>
             </div>
         </div>
     )
