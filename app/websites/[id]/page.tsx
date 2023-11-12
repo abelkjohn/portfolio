@@ -34,7 +34,7 @@ export default async function Website({params}){
             <Header />
             <div className="m-6 mt-20">
                 <h1 className="text-3xl m-4 text-center">{title}</h1>
-                <img className="custom-webpage-ind-img rounded-xl shadow-2xl shadow-indigo-400/50 mx-auto" src={image}></img>
+                <img className="custom-webpage-ind-img rounded-xl shadow-2xl shadow-indigo-400/50 mx-auto max-w-3xl" src={image}></img>
                 <div className="flex justify-center gap-4 m-8">
                     <Link className="p-2 border-2 bg-white" href={liveUrl} target="_blank">Live Link</Link>
                     {gitUrl ? <Link className="p-2 border-2 bg-white" href={gitUrl} target="_blank">Git Repo</Link> : null}
@@ -42,7 +42,7 @@ export default async function Website({params}){
                 <div className="flex gap-2 flex-wrap">
                     {skills.map(i => <p key={i} className="px-4 py-2 text-center border-none bg-indigo-500 shadow-xl shadow-indigo-700/50 rounded-sm text-slate-100">{i}</p>)}
                 </div>
-                <div id='poda' className="mt-5">{convert()}</div>
+                <div id='poda' className="description">{convert()}</div>
             </div>
         </div>
     )

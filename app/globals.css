@@ -44,6 +44,19 @@ html, body {
     width: 90%;
 }
 
+.description {
+    padding: 2em 4em;
+
+}
+
+.description h1 {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.description p {
+    padding: 0.5em 1em;
+}
 @media (min-width: 600px) {
     .custom-width {
     width: 28em;
